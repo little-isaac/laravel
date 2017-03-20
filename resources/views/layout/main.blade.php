@@ -1,15 +1,24 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
-        <title>Laravel Test</title>
+        <title><?php echo env('APP_NAME'); ?></title>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
-        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+        <script>
+     window.theme = window.theme || {};
+window.cn = function (o) {
+    return"undefined" == typeof o || null == o || "" == o.toString().trim()
+};
+</script>
+<link href="https://fonts.googleapis.com/css?family=Work+Sans:300,400,600" rel="stylesheet">
+<link href="{{ URL::asset('css/style.css') }}?t=<?php echo time(); ?>" rel="stylesheet" type="text/css"/>
     </head>
     <body>
-        @include('includes.navbar')
+        @include('includes.header')
+        <main class="mainPageContent">
         @yield('content')
+        </main>
+        @include('includes.footer')
+        @include('includes.footer-script')
     </body>
 </html>

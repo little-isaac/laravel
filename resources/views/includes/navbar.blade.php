@@ -1,22 +1,30 @@
-<nav class="navbar navbar-inverse">
-    <div class="container-fluid">
-        <div class="navbar-header">
-            <a class="navbar-brand" href="#">WebSiteName</a>
+<nav class="main_nav"> 
+    <div class="container">
+    <div class="menu_wrapper">
+        <div class="table_view">
+            <div class="col-sm-9">
+                <div class="menu">
+                    <ul class="main_ul">
+<!--                        <li>
+                            <a href="{{URL::to('/')}}">
+                                HOME
+                            </a>
+                        </li>-->
+                        <li>
+                            <a href="{{URL::to('/list-your-business')}}">
+                                List Your Business
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col-sm-3">
+                <div class="brand_name">
+                    <a href="{{URL::to('/')}}"><?php echo env('APP_NAME') ?></a>
+                </div>        
+            </div>
         </div>
-        <ul class="nav navbar-nav">
-            <li class="active"><a href="#">Home</a></li>
-            <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#">Page 1 <span class="caret"></span></a>
-                <ul class="dropdown-menu">
-                    <li><a href="#">Page 1-1</a></li>
-                    <li><a href="#">Page 1-2</a></li>
-                    <li><a href="#">Page 1-3</a></li>
-                </ul>
-            </li>
-            <li><a href="#">Page 2</a></li>
-        </ul>
-        <ul class="nav navbar-nav navbar-right">
-            <li><a href="{{URL::to('/register')}}"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
-            <li><a href="{{URL::to('/login')}}"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
-        </ul>
+    </div>
+
     </div>
 </nav>

@@ -1,0 +1,346 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : Dec 10, 2016, 4:42:02 PM
+    Author     : PRABHAKAR
+*/
+/*================ Typography ================*/
+$heading_font: 'Work Sans', sans-serif;
+$h1_font_size : 30;
+$h2_font_size : 30;
+$h3_font_size : 30;
+$h4_font_size : 30;
+$h5_font_size : 30;
+$h6_font_size : 30;
+$h1_font_weight : bold;
+$h2_font_weight : bold;
+$h3_font_weight : 400;
+$h4_font_weight : normal;
+$h5_font_weight : normal;
+$h6_font_weight : normal;
+
+$basic_font:'Work Sans', sans-serif ;
+$basic_font_size: 16; 
+/*================ Font color ================*/
+$font_color: #333;
+$header_color: #000;
+$anchor_tag_color:#999999;
+$anchor_tag_hover_color:#000;
+*{
+  box-sizing: border-box;
+  -webkit-tap-highlight-color: rgba(0,0,0,0);
+  -moz-tap-highlight-color: rgba(0,0,0,0);
+  -ms-tap-highlight-color: rgba(0,0,0,0);
+  -o-tap-highlight-color: rgba(0,0,0,0);
+}
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+  word-wrap: break-word;
+  box-sizing:border-box;
+}
+body,
+input,
+textarea,
+button,
+select {
+  font-size: $basic_font_size + px;
+  font-family: $basic_font;
+  color: $font_color;
+  line-height: 1.5;
+  @media(max-width:767px){
+    font-size: ($basic_font_size * .9) + px;
+  }
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+ol, ul {
+  list-style: none;
+}
+blockquote, q {
+  quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+
+
+/*================ Headings ================*/
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin-bottom:1em;
+  font-family: $heading_font;
+  line-height: 1.2;
+  overflow-wrap: break-word;
+  word-wrap: break-word;
+  margin-bottom: 15px;
+  color: $header_color;
+  a {
+    color: inherit;
+    text-decoration: none;
+    font-weight: inherit;
+  }
+}
+
+h1 {
+  font-size: $h1_font_size + px ;
+  font-weight: $h1_font_weight;
+  @media(max-width:767px){
+    font-size: ($h1_font_size * 0.75) + px;
+  }
+}
+
+h2 {
+  font-size:  $h2_font_size + px ;
+  font-weight: $h2_font_weight;
+  @media(max-width:767px){
+    font-size: ($h2_font_size * 0.78) + px;
+  }
+}
+
+h3 {
+  font-size:  $h3_font_size + px ;
+  font-weight: $h3_font_weight;
+  @media(max-width:767px){
+    font-size: ($h3_font_size * 0.79) + px;
+  }
+}
+
+h4 {
+  font-size:  $h4_font_size + px ;
+  font-weight: $h4_font_weight;
+  @media(max-width:767px){
+    font-size: ($h4_font_size * 0.80) + px;
+  }
+}
+
+h5 {
+  font-size:  $h5_font_size + px ;
+  font-weight: $h5_font_weight;
+  @media(max-width:767px){
+    font-size: ($h5_font_size * 0.82) + px;
+  }
+}
+
+h6 {
+  font-size: $h6_font_size + px ;
+  font-weight: $h6_font_weight;
+  @media(max-width:767px){
+    font-size: ($h6_font_size * 0.85) + px;
+  }
+}
+b,strong{
+  font-weight:bold;
+}
+
+p{
+  font-weight: normal;
+  line-height: 1.1;
+  margin-bottom: 1em;
+}
+span{
+  line-height: 20px;
+}
+em {
+  font-style: italic;
+}
+small {
+  font-size: 75%
+}
+img {
+  vertical-align: middle;
+}
+
+s{
+  color:red;
+}
+.img-responsive {
+  max-width: 100%;
+  height: auto;
+  width: 100%;
+}
+.text-center{
+  text-align: center;
+}
+.text-left{
+  text-align: left;
+}
+.text-right{
+  text-align: right;
+}
+a{
+  text-decoration: none;
+  color:$anchor_tag_color;
+  line-height:20px;
+  cursor: pointer;
+  &:hover{
+    color:$anchor_tag_hover_color;
+  }
+}
+.display-table{
+  display: table;
+  width:100%;
+}
+.display-block{
+  display: block;
+}
+.display-inline-block{
+  display: inline-block;
+}
+.display-inline{
+  display: inline;
+}
+.display-table-cell{
+  display: table-cell;
+}
+.fixed{
+  position: fixed;
+}
+.v_hide{
+  visibility:hidden;
+}
+.visually-hidden, .hide{
+  display:none;
+}
+.img_blur{
+  width:100%;
+  height:auto;
+  max-width:100%;
+}
+.img_load{
+  filter:blur(7px);
+  -webkit-filter:blur(7px);
+  -moz-filter:blur(7px);
+  -o-filter:blur(7px);
+}
+.sm-hide{
+  @media(max-width:991px){
+    display:none;
+  }
+}
+.xs-hide{
+  @media(max-width:767px){
+    display:none;
+  }
+}
+.xs-show{
+  @media(min-width:768px){
+    display:none;
+  }
+}
+
+.xs-center{
+  @media(max-width:767px){
+    text-align:center;
+  }
+}
+.xs-left{
+  @media(max-width:767px){
+    text-align:left;
+  }
+}
+.xs-right{
+  @media(max-width:767px){
+    text-align:right;
+  }
+}
+.sm-center{
+  @media(max-width:991px){
+    text-align:center;
+  }
+}
+.sm-left{
+  @media(max-width:991px){
+    text-align:left;
+  }
+}
+.sm-right{
+  @media(max-width:991px){
+    text-align:right;
+  }
+}
+.relative{
+  position:relative;
+}
+.inline-block{
+  display:inline-block;
+}
+.block{
+  display:block;
+}
+.table_view_xs{
+  div[class^="col"] {
+    padding-left:0;
+    position:static;
+    padding-right:0;
+  }
+  display:table;
+  width:100%;
+  div[class^="col"] {
+    float:none;
+    padding-left:0;
+    padding-right:0;
+    display:table-cell;
+    vertical-align:middle;
+  }
+}
+.table_view{
+  div[class^="col"] {
+    padding-left:0;
+    position:static;
+    padding-right:0;
+  }
+  @media(min-width:768px){
+    display:table;
+    width:100%;
+    div[class^="col"] {
+      float:none;
+      padding-left:0;
+      padding-right:0;
+      display:table-cell;
+      vertical-align:middle;
+    }
+  }
+}
+.error{
+    font-style: italic;
+    font-size: 80%;
+    color:red;
+}

@@ -1,0 +1,65 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : Dec 10, 2016, 4:46:17 PM
+    Author     : PRABHAKAR
+*/
+$navbar_background:#53a318;
+$navbar_font_color:#fff;
+$navbar_active: #f05d7c;
+$navbar_hover: #f05d7c;
+$drop_down_color:#325273;
+nav.main_nav{
+    background: $navbar_background;
+    box-shadow: 0 2px 5px 0 rgba(0,0,0,0.16),0 2px 10px 0 rgba(0,0,0,0.12);
+    .menu_wrapper{
+        
+        .menu{
+            @media(max-width:1024px){
+                display:none;
+            }
+            ul.main_ul{
+
+                &:after{
+                    clear: both;
+                    content: '';
+                    display: table;
+                }
+                >li{
+                    float:left;
+                    a{
+                        padding: 16px 12px;
+                        display: block;
+                        &:hover{
+                            background-color: $navbar_hover;
+                        }
+                        &.active{
+                            background-color:$navbar_active; 
+                        }
+                    }
+                }
+            }
+        }
+        .brand_name{
+            text-align: right;
+            @media(max-width:1024px){
+                text-align: center;
+                padding:15px 0;
+            }
+            a{
+                display: block;
+                &:hover{
+                    color:$navbar_hover;
+                }
+            }
+        }
+    }
+
+    a{
+        color:$navbar_font_color;
+        transition :.5s all;
+    }
+}

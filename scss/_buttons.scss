@@ -1,0 +1,167 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : Dec 10, 2016, 4:47:32 PM
+    Author     : PRABHAKAR
+*/
+$btn_default_font_color:#333;
+$btn_default_background_color:#fafafa;
+$btn_default_border_color:#ddd;
+$btn_default_hover_color:#333;
+$btn_default_hover_font_color:#fff;
+$btn_primary_font_color:#fff;
+$btn_primary_background_color:#337a9e;
+$btn_primary_hover_color:#4f6b79;
+$btn_danger_font_color:#fff;
+$btn_danger_background_color:#f13058;
+$btn_danger_hover_color:#f05d7c;
+$btn_warning_font_color:#fff;
+$btn_warning_background_color:#f5a027;
+$btn_warning_hover_color:#e88800;
+$btn_success_font_color:#fff;
+$btn_success_background_color:#53a318;
+$btn_success_hover_color:#3a7210;
+$btn_info_font_color:#fff;
+$btn_info_background_color:#46b8da;
+$btn_info_hover_color:#00acde;
+$btn_plus_font_color:#fff;
+$btn_plus_background_color:#F44336;
+$btn_plus_hover_color:#ff1100;
+.btn{
+    position: relative;
+    cursor: pointer;
+    display: inline-block;
+    overflow: hidden;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    -webkit-tap-highlight-color: transparent;
+    vertical-align: middle;
+    z-index: 1;
+    border-radius: 1px;
+    will-change: opacity, transform;
+    -webkit-transition: all 0.3s ease-out;
+    -moz-transition: all 0.3s ease-out;
+    -o-transition: all 0.3s ease-out;
+    -ms-transition: all 0.3s ease-out;
+    transition: all 0.3s ease-out;
+    box-shadow: 0 2px 5px 0 rgba(0,0,0,0.16),0 2px 10px 0 rgba(0,0,0,0.12);
+    padding: 6px 12px;
+    margin-bottom: 0;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 1.42857143;
+    text-align: center;
+    outline: none;
+    border: 1px solid;
+    white-space: nowrap;
+    &:hover{
+        box-shadow: 0 5px 11px 0 rgba(0,0,0,0.18),0 4px 15px 0 rgba(0,0,0,0.15);
+    }
+}
+.btn-default{
+    background-color: $btn_default_background_color;
+    border-color:  $btn_default_border_color;
+    color: $btn_default_font_color;
+    &:hover{
+        background-color: $btn_default_hover_color;
+        color:$btn_default_hover_font_color;
+        border-color: $btn_default_hover_color;
+    }
+}
+.btn-primary{
+    background-color: $btn_primary_background_color;
+    border-color:  $btn_primary_background_color;
+    color: $btn_primary_font_color;
+    border-radius: 1px;
+    &:hover{
+        background-color: $btn_primary_hover_color;
+        border-color: $btn_primary_hover_color;
+    }
+}
+.btn-danger{
+    background-color: $btn_danger_background_color;
+    border-color:  $btn_danger_background_color;
+    color: $btn_danger_font_color;
+    border-radius: 1px;
+    &:hover{
+        background-color: $btn_danger_hover_color;
+        border-color: $btn_danger_hover_color;
+    }
+}
+.btn-warning{
+    background-color: $btn_warning_background_color;
+    border-color:  $btn_warning_background_color;
+    color: $btn_warning_font_color;
+    border-radius: 1px;
+    &:hover{
+        background-color: $btn_warning_hover_color;
+        border-color: $btn_warning_hover_color;
+    }
+}
+.btn-success{
+    background-color: $btn_success_background_color;
+    border-color:   $btn_success_background_color;
+    color: $btn_success_font_color;
+    border-radius: 1px;
+    &:hover{
+        background-color: $btn_success_hover_color;
+        border-color: $btn_success_hover_color;
+    }
+}
+.btn-info{
+    background-color: $btn_info_background_color;
+    border-color: $btn_info_background_color;
+    color: $btn_info_font_color;
+    border-radius: 1px;
+    &:hover{
+        background-color: $btn_info_hover_color;
+        border-color: $btn_info_hover_color;
+    }
+}
+.btn-disabled{
+    cursor: not-allowed;
+    filter: alpha(opacity=65);
+    -webkit-box-shadow: none;
+    box-shadow: none;
+    opacity: .5;
+}
+.btn-plus{
+    border-radius: 100%;
+    background-color:$btn_plus_background_color;
+    border-color:$btn_plus_background_color;
+    color: $btn_plus_font_color;
+    padding: 12px 18px;
+    :hvoer{
+        background-color:$btn_plus_hover_color;
+        border-color:$btn_plus_hover_color;
+    }
+}
+.btn-outline{
+    &.btn-primary{
+        color:$btn_primary_background_color;
+    }
+    &.btn-danger{
+        color:$btn_danger_background_color;
+    }
+    &.btn-warning{
+        color:$btn_warning_background_color;
+    }
+    &.btn-success{
+        color:$btn_success_background_color;
+    }
+    &.btn-info{
+        color:$btn_info_background_color;
+    }
+}
+.btn-outline{
+    background: transparent;
+    color:#000;
+    &:hover{
+        color:#fff;
+    }
+}
