@@ -17,19 +17,26 @@ Route::get('/', function () {//merchant signup
 Route::get('/list-your-business', 'ListBusinessController@get');
 Route::post('/list-your-business', 'ListBusinessController@registerWithNewCustomer');
 
-Route::group(['prefix' => 'admin'], function () {           // admin routes
-    Route::get('login', function () {                   //login
-        return view('pages.admin.login');
+Route::group(['prefix' => 'admin', 'namespace' => "Admin"], function () {           // admin routes
+    Route::get('/', function () {                   //register
+        return redirect('admin/dashboard');
     });
-
-    Route::get('dashboard', function () {               // dashboard
-        return view('pages.admin.dashboard');
+    Route::get('login', 'LoginController@get_login');
+    Route::post('login', 'LoginController@post_login');
+    Route::group(['middleware' => 'AdminMiddleware'], function() {
+        Route::get('dashboard', function () {               //dashboard
+            return view('pages.admin.dashboard');
+        });
     });
 });
-Route::group(['prefix' => 'customer','namespace'=>"Customer"], function () {        // customer or merchant routes 
+Route::group(['prefix' => 'customer', 'namespace' => "Customer"], function () {        // customer or merchant routes 
+    Route::get('/', function () {                   //register
+        return redirect('customer/dashboard');
+    });
     Route::get('register', function () {                   //register
         return view('pages.customer.register');
     });
+
     Route::get('login', 'LoginController@get_login');
     Route::post('login', 'LoginController@post_login');
 //    Route::get('logout', 'LoginController@get_logout');

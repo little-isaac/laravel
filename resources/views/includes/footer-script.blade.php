@@ -1,3 +1,5 @@
-<script src="./js/jqery_2.1.4.js"></script>
-<script src="./js/libs.js"></script>
-<script src="./js/script.js"></script>
+<!--footer-script-->
+<script src="{{ URL::asset('js/jqery_2.1.4.js') }}"></script>
+<script src="{{ URL::asset('js/libs.js') }}?t=<?php echo time(); ?>"></script>
+<script src="{{ URL::asset('js/script.js') }}?t=<?php echo time(); ?>"></script>
+        

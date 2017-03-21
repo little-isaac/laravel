@@ -5,7 +5,7 @@ namespace App\Http\Middleware;
 use Closure;
 use Auth;
 
-class CustomerMiddleware {
+class AdminMiddleware {
 
     /**
      * Handle an incoming request.
@@ -15,10 +15,10 @@ class CustomerMiddleware {
      * @return mixed
      */
     public function handle($request, Closure $next) {
-        if (Auth::guard('customer')->check()) {
+        if (Auth::guard('admin')->check()) {
             
         } else {
-            return redirect('customer/login');
+            return redirect('admin/login');
         }
         return $next($request);
     }

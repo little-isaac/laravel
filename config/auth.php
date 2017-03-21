@@ -74,7 +74,7 @@ return [
         ],
         'admin_guard' => [
             'driver' => 'eloquent',
-            'model' => App\Register::class,
+            'model' => App\admin_users::class,
         ],
         'customer_guard' => [
             'driver' => 'eloquent',
