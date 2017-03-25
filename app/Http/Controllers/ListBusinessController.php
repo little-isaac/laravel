@@ -72,6 +72,9 @@ class ListBusinessController extends Controller {
 
     function getCategory() {
         $category = category::all();
+        foreach($category as $i=>$cate){
+            $category[$i]->image = json_decode($cate->image,true);
+        }
         return $category;
     }
 }
