@@ -157,6 +157,7 @@ return [
         App\Providers\EventServiceProvider::class,
         App\Providers\RouteServiceProvider::class,
         Dingo\Api\Provider\LaravelServiceProvider::class,
+        Intervention\Image\ImageServiceProvider::class
     ],
     /*
       |--------------------------------------------------------------------------
@@ -205,5 +206,6 @@ return [
         'Input' => Illuminate\Support\Facades\Input::class,
         'DingoApi' => Dingo\Api\Facade\API::class,
         'DingoRoute' => Dingo\Api\Facade\Route::class,
+        'Image' => Intervention\Image\Facades\Image::class
     ],
 ];

@@ -12,6 +12,9 @@ class CategoryController extends Controller {
     public function get_all() {
 //        return array("success"=>true);
         $category = category::all();
+        foreach($category as $i=>$cate){
+            $category[$i]->image = json_decode($cate->image,true);
+        }
         if ($category) {
             return array(
                 "success" => true,

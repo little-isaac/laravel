@@ -30,6 +30,9 @@ $btn_info_hover_color:#00acde;
 $btn_plus_font_color:#fff;
 $btn_plus_background_color:#F44336;
 $btn_plus_hover_color:#ff1100;
+$btn_disabled_font_color:#fff;
+$btn_disabled_background_color:#999;
+
 .btn{
     position: relative;
     cursor: pointer;
@@ -59,6 +62,16 @@ $btn_plus_hover_color:#ff1100;
     outline: none;
     border: 1px solid;
     white-space: nowrap;
+    &.disabled{
+        background: $btn_disabled_background_color;
+        border-color: $btn_disabled_background_color;
+        color: $btn_disabled_font_color;
+        &:hover{
+        background: $btn_disabled_background_color;
+        border-color: $btn_disabled_background_color;
+        color: $btn_disabled_font_color;    
+        }
+    }
     &:hover{
         box-shadow: 0 5px 11px 0 rgba(0,0,0,0.18),0 4px 15px 0 rgba(0,0,0,0.15);
     }
