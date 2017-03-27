@@ -26,7 +26,7 @@ class BusinessController extends Controller {
             "account_holder_name" => "string|nullable|max:255",
             "bank_name" => "string|nullable|max:255",
             "branch_name" => "string|nullable|max:255",
-            "account_number" => "integer|nullable|max:255",
+            "account_number" => "nullable|max:255",
             "ifsc_code" => "string|nullable|max:255",
             "bank_location" => "string|nullable|max:255"
         );
@@ -80,7 +80,7 @@ class BusinessController extends Controller {
             "account_holder_name" => "string|nullable|max:255",
             "bank_name" => "string|nullable|max:255",
             "branch_name" => "string|nullable|max:255",
-            "account_number" => "integer|nullable|max:255",
+            "account_number" => "nullable|max:255",
             "ifsc_code" => "string|nullable|max:255",
             "bank_location" => "string|nullable|max:255"
         );
