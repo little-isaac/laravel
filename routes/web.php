@@ -12,33 +12,33 @@
  */
 
 Route::get('/image', function () {//merchant signup
-    try {
-        $categories = array("food",'gym','health','hotel','movie','salon');
+//    try {
+        $categories = array("1",'2','3','4','5','6');
         $image_path = "images/category/";
         foreach ($categories as $category) {
             $image_path_save = $image_path . $category;
             File::makeDirectory($image_path_save,0777,true,true);
             $img = null;
-            $img = Image::make($image_path . "$category.jpg");
-            $img->save($image_path_save."/1000_$category.png");
+            $img = Image::make($image_path . "$category.png");
+            $img->save($image_path_save."/1000.jpg",60);
             $img->resize(600, null, function ($constraint) {
                 $constraint->aspectRatio();
             });
-            $img->save($image_path_save."/600_$category.png");
+            $img->save($image_path_save."/600.jpg",60);
             $img->resize(300, null, function ($constraint) {
                 $constraint->aspectRatio();
             });
-            $img->save($image_path_save."/300_$category.png");
+            $img->save($image_path_save."/300.jpg",60);
             $img->resize(150, null, function ($constraint) {
                 $constraint->aspectRatio();
             });
-            $img->save($image_path_save."/150_$category.png");
+            $img->save($image_path_save."/150.jpg",60);
             
         }
-        return $img->response('png');
-    } catch (Exception $ex) {
-        return $ex->getMessage();
-    }
+        return $img->response('jpg');
+//    } catch (Exception $ex) {
+//        return $ex->getTraceAsString();
+//    }
 });
 Route::get('/', function () {//merchant signup
     return redirect('/list-your-business');
