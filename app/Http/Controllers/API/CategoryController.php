@@ -6,19 +6,26 @@ use App\Http\Controllers\Controller;
 use App\category;
 use Request;
 use Validator;
-
+use URL;
 class CategoryController extends Controller {
 
     public function get_all() {
 //        return array("success"=>true);
         $category = category::all();
+        $category_ = array();
         foreach($category as $i=>$cate){
             $category[$i]->image = json_decode($cate->image,true);
+            $category_[]= json_decode(json_encode($category[$i]),true);
+        }
+        foreach($category_ as $i=>$cate){
+            foreach($cate['image'] as $j=>$images){
+                $category_[$i]['image'][$j] = URL::asset("images/category/".$cate['id']."/".$images);
+            }
         }
         if ($category) {
             return array(
                 "success" => true,
-                "categroies" => $category
+                "categroies" => $category_
             );
         } else {
             return array(
@@ -43,10 +50,16 @@ class CategoryController extends Controller {
             );
         } else {
             $category = category::find($id);
+            $category_ = array();
+            $category->image = json_decode($category->image,true);
+            $category_ = json_decode(json_encode($category),true);
+            foreach($category_['image'] as $j=>$images){
+                $category_['image'][$j] =  URL::asset("images/category/".$category_['id']."/".$images);
+            }
             if ($category) {
                 return array(
                     "success" => true,
-                    "category" => $category
+                    "category" => $category_
                 );
             }
             return array(

@@ -13,7 +13,7 @@ class CategorySeeder extends Seeder {
      */
     public function run() {
         $categories = [
-            array("title"=>'Food and beverage',"image"=>array('1000'=>"1000_.png","600"=>"600_.png","300"=>"300_.png","150"=>"150_.png")),
+            array("title"=>'Food & Drinks',"image"=>array('1000'=>"1000_.png","600"=>"600_.png","300"=>"300_.png","150"=>"150_.png")),
             array("title"=>'Health & Beauty',"image"=>array('1000'=>"1000_.png","600"=>"600_.png","300"=>"300_.png","150"=>"150_.png")),
             array("title"=>'Hotels & Travels',"image"=>array('1000'=>"1000_.png","600"=>"600_.png","300"=>"300_.png","150"=>"150_.png")),
             array("title"=>'Spa & Salon',"image"=>array('1000'=>"1000_.png","600"=>"600_.png","300"=>"300_.png","150"=>"150_.png")),
