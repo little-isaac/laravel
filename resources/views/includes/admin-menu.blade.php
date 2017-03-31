@@ -6,11 +6,6 @@
                             Business list
                         </a>
                     </li>
-                    <li>
-                        <a href="{{URL::to("admin/category")}}">
-                            Category
-                        </a>
-                    </li>
                     
                 </ul>
             </div>

@@ -26,7 +26,7 @@ main.mainPageContent{
                 &.step{
                     &.active{
                         .circle{
-                            background-color: #2dbaaa;
+                            background-color: #f30;
                         }
                     }
                     .line{
@@ -34,14 +34,14 @@ main.mainPageContent{
                         left: calc(50% + 28px);
                         border-top: 1px;
                         top: 14px;
-                        border-top: 2px solid #e0e0e0;
+                        border-top: 2px solid #f30;
                         position: absolute;
                         @media(max-width:767px){
                             width:50%;
                         }
                     }
                     .circle{
-                        border: solid 2px #2dbaaa;
+                        border: solid 2px #f30;
                         box-shadow: 0 0 0 6px #fff;
                         width: 28px;
                         height: 28px;
@@ -69,13 +69,8 @@ main.mainPageContent{
                         clear: both;
                     }
                 }
-                @media(max-width:991px) and (min-width:768px){
+                @media(min-width:768px){
                     &:nth-of-type(3n+1){
-                        clear: both;
-                    }
-                }
-                @media(min-width:992px){
-                    &:nth-of-type(4n+1){
                         clear: both;
                     }
                 }
@@ -101,7 +96,6 @@ main.mainPageContent{
                         .name{
                             margin:0;
                             cursor:pointer;
-                            display:none;
                             color:#fff;
                             font-size: 16px;
                             @media(max-width:1024px){
@@ -152,11 +146,11 @@ main.mainPageContent{
         position: fixed;
         border-right: 1px solid #ddd;
         left: 0;
-        top: 52px;
+        top: 75px;
         bottom: 0;
         z-index: 100;
         background: #f9f9f9;
-        height: 100%;
+        height: calc(100% - 75px);
         overflow-y: auto;
         box-shadow: 1px 3px 3px 0px #999;
         ul.list{
@@ -198,9 +192,9 @@ main.mainPageContent{
             width: auto;
             cursor: pointer;
             transition: .5s all;
-            color:#999;
+            color:#000;
             &.active{
-                color: #000;
+                color: #800080;
             }
         }
     }

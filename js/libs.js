@@ -784,5 +784,6 @@ s.sliderLastPos={top:"x"==i?0:s.sliderStartPos.top+s.distanceY,left:a},o(functio
   };
 
 }( jQuery ));
-
-            
+    window.cn = function (o) {
+        return"undefined" == typeof o || null == o || "" == o.toString().trim()
+    };

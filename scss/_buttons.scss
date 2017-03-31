@@ -22,8 +22,9 @@ $btn_warning_font_color:#fff;
 $btn_warning_background_color:#f5a027;
 $btn_warning_hover_color:#e88800;
 $btn_success_font_color:#fff;
-$btn_success_background_color:#53a318;
-$btn_success_hover_color:#3a7210;
+$btn_success_background_color:#800080;
+$btn_success__background_hover_color:#ff3300;
+$btn_success_hover_color:#fff;
 $btn_info_font_color:#fff;
 $btn_info_background_color:#46b8da;
 $btn_info_hover_color:#00acde;
@@ -102,8 +103,9 @@ $btn_disabled_background_color:#999;
     color: $btn_danger_font_color;
     border-radius: 1px;
     &:hover{
-        background-color: $btn_danger_hover_color;
-        border-color: $btn_danger_hover_color;
+        background-color: $btn_success__background_hover_color;
+        border-color: $btn_success__background_hover_color;
+        color:$btn_success_hover_color;
     }
 }
 .btn-warning{
@@ -122,8 +124,9 @@ $btn_disabled_background_color:#999;
     color: $btn_success_font_color;
     border-radius: 1px;
     &:hover{
-        background-color: $btn_success_hover_color;
-        border-color: $btn_success_hover_color;
+        color: $btn_success_font_color;
+        background-color: $btn_success__background_hover_color;
+        border-color: $btn_success__background_hover_color;
     }
 }
 .btn-info{

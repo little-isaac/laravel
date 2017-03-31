@@ -476,7 +476,6 @@ textarea.materialize-textarea {
 [type="radio"]:not(:checked),
 [type="radio"]:checked {
   position: absolute;
-  left: -9999px;
   opacity: 0;
 }
 
@@ -608,7 +607,6 @@ form p:last-child {
 [type="checkbox"]:not(:checked),
 [type="checkbox"]:checked {
   position: absolute;
-  left: -9999px;
   opacity: 0;
 }
 
@@ -1197,4 +1195,9 @@ input[type=range]:focus::-ms-fill-lower {
 
 input[type=range]:focus::-ms-fill-upper {
   background: #ccc;
+}
+input[type=number]::-webkit-inner-spin-button, 
+input[type=number]::-webkit-outer-spin-button { 
+  -webkit-appearance: none; 
+  margin: 0; 
 }

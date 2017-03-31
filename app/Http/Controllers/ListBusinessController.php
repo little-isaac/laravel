@@ -34,14 +34,19 @@ class ListBusinessController extends Controller {
             "zipcode" => "required|max:255",
             "no_of_physical_locations" => "required|max:255",
             "category" => "required|integer|exists:category,id",
+            "isFirm" => "required|boolean",
+            "account_holder_name" => "string|nullable|max:255",
+            "bank_name" => "string|nullable|max:255",
+            "branch_name" => "string|nullable|max:255",
+            "account_number" => "nullable|max:255",
+            "ifsc_code" => "string|nullable|max:255",
+            "bank_location" => "string|nullable|max:255"
         );
         $msgs = array(
             "category.integer" => "Category must be valid."
         );
         $validator = Validator::make($data, $rule, $msgs);
         if ($validator->fails()) {
-            var_dump($validator->errors());
-            exit();
             return Redirect::to('/list-your-business')->withErrors($validator);
         } else {
             $business = new business();
@@ -64,6 +69,13 @@ class ListBusinessController extends Controller {
             $business->no_of_physical_locations = Request::input('no_of_physical_locations');
             $business->category = Request::input('category');
             $business->isApproved = false;
+            $business->isFirm = Request::input('isFirm');
+            $business->account_holder_name = Request::input('account_holder_name');
+            $business->bank_name = Request::input('bank_name');
+            $business->branch_name = Request::input('branch_name');
+            $business->account_number = Request::input('account_number');
+            $business->ifsc_code = Request::input('ifsc_code');
+            $business->bank_location = Request::input('bank_location');
             $business->save();
 
             return Redirect::to('/list-your-business')->with('success', 'Successfully Registered');
