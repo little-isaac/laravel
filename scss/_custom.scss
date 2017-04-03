@@ -36,8 +36,14 @@ main.mainPageContent{
                         top: 14px;
                         border-top: 2px solid #f30;
                         position: absolute;
-                        @media(max-width:767px){
+                        @media(max-width:350px){
+                            width:40%;
+                        }
+                        @media(max-width:767px) and (min-width:351px){
                             width:50%;
+                        }
+                        @media(max-width:991px) and (min-width:768px){
+                            width:65%;
                         }
                     }
                     .circle{
@@ -50,7 +56,10 @@ main.mainPageContent{
                     }
                     p{
                         margin-bottom: 0;
-                        margin-top: 5px;                        
+                        margin-top: 5px; 
+                        @media(max-width:551px){
+                            font-size:10px;
+                        }
                     }
                 }
 
@@ -148,11 +157,46 @@ main.mainPageContent{
         left: 0;
         top: 75px;
         bottom: 0;
-        z-index: 100;
+        z-index: 102;
         background: #f9f9f9;
         height: calc(100% - 75px);
         overflow-y: auto;
         box-shadow: 1px 3px 3px 0px #999;
+        -webkit-transition: 0.35s cubic-bezier(0.46, 0.01, 0.32, 1);
+        -moz-transition: 0.35s cubic-bezier(0.46, 0.01, 0.32, 1);
+        -o-transition: 0.35s cubic-bezier(0.46, 0.01, 0.32, 1);
+        -ms-transition: 0.35s cubic-bezier(0.46, 0.01, 0.32, 1);
+        transition: 0.35s cubic-bezier(0.46, 0.01, 0.32, 1);
+        @media(max-width:1024px){
+            top:85px;
+        }
+        @media(max-width:767px){
+            top: 0;
+            height: 100%;
+            left:-100%;
+            &.active{
+                left: 0;
+            }
+        }
+        .user_info{
+            padding:30px 15px;
+            background: url(../images/user-bg.jpg);
+            background-size: cover;
+            color: #fff;
+            .user_logo{
+                line-height: 1;
+                font-size: 30px;
+                color: #2a3258;
+            }
+            .user_detail{
+                p{
+                    margin: 0;
+                }
+                a{
+                    padding: 5px 0;
+                }
+            }
+        }
         ul.list{
             >li{
                 border-bottom:  1px solid #e7e7e7;
@@ -166,6 +210,14 @@ main.mainPageContent{
     }
     .content{
         margin-left: 260px;
+        @media(max-width:767px){
+            margin-left: 0px;    
+        }
+        .admin_menu_btn{
+            color: $navbar_font_color;
+            font-size: 26px;
+
+        }
     }
 }
 .tab-container{

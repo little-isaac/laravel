@@ -5,18 +5,33 @@
  */
 
 //start of events
-window.theme = window.theme || {};
-theme= {};
+
 theme.clickEvent = function () {
-$(document).on("click",".tab-container .tabs .tab",function (){
-   var  parent = $(this).closest(".tab-container");
-   $(".tab",parent).removeClass("active");
-   $(this).addClass("active");
-   var target = $(this).attr("data-index");
-   target = $(".data[data-index='"+target+"']",parent);
-   $(".data",parent).removeClass("active");
-   target.addClass("active");
-});
+    $(document).on("click", ".tab-container .tabs .tab", function () {
+        var parent = $(this).closest(".tab-container");
+        $(".tab", parent).removeClass("active");
+        $(this).addClass("active");
+        var target = $(this).attr("data-index");
+        target = $(".data[data-index='" + target + "']", parent);
+        $(".data", parent).removeClass("active");
+        target.addClass("active");
+    });
+    $(".mobile_menu_btn>a").click(function(e){
+    e.stopPropagation();
+    theme.openMobileMenu();
+  });
+  $("#mobile_drawer .drawer_close").click(function(){
+    theme.closeMobileMenu();
+  });
+    $(document).on("click",".black_bg",function(){
+    theme.closeAllDrawer();
+  });
+  $(document).on("click",".body_wrapper.active",function(){
+    theme.closeAllDrawer();
+  });
+  $(".admin_menu_btn").click(function (){
+      theme.adminMenuOpen();
+  });
 };
 theme.hoverEvent = function () {
 };
@@ -105,13 +120,66 @@ theme.fancyAlert = function (opts) {
             '<p>' + opts.message + '</p>', {
             });
 };
-
-
+theme.imageFile = function (selector) {
+    var val = selector.val();
+    var label = selector.siblings("label");
+    switch (val.substring(val.lastIndexOf('.') + 1).toLowerCase()) {
+        case 'gif':
+        case 'jpg':
+        case 'png':
+          $(".error",label).hide();
+            return true;
+            break;
+        default:
+            selector.val('');
+            // error message here
+           $(".error",label).show();
+           return false;
+            break;
+    }
+};
+theme.openMobileMenu = function(){
+  $("#mobile_drawer").addClass("active");
+  $(".body_wrapper").addClass("active-left active");
+  theme.blankBgOpen();
+};
+theme.closeMobileMenu = function(){
+  $("#mobile_drawer").removeClass("active");
+  $(".body_wrapper").removeClass("active-left active");
+  theme.blankBgClose();
+};
+theme.blankBgOpen = function(){
+  $(".black_bg").fadeIn();
+  $("html").addClass("overflow_hidden");
+  $("body").addClass("overflow_hidden");
+};
+theme.blankBgClose = function(){
+  $(".black_bg").fadeOut();
+  $("html").removeClass("overflow_hidden");
+  $("body").removeClass("overflow_hidden");
+};
+theme.initMobileMenu = function(){
+  var data = $("#mobile_drawer");
+  $("body").append(data);
+};
+theme.closeAllDrawer = function(){
+  theme.closeMobileMenu();
+  theme.adminMenuClose();
+};
+theme.adminMenuOpen = function (){
+    $(".admin_menu").addClass("active");
+    theme.blankBgOpen();
+};
+theme.adminMenuClose = function (){
+    $(".admin_menu").removeClass("active");
+    theme.blankBgClose();
+};
 theme.init = function () {
     theme.clickEvent();
     theme.hoverEvent();
     theme.changeEvent();
     theme.submitEvent();
+    theme.initMobileMenu();
 };
 theme.load = function () {
     $(window).load(function () {});

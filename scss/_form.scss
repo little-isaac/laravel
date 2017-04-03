@@ -1009,42 +1009,17 @@ select:disabled {
 /* File Input
    ========================================================================== */
 .file-field {
-  position: relative;
+    label{
+        position: static;
+        margin-bottom: 8px;
+        display: inline-block;
+    }
+    input{
+        display: block;
+    }
 }
 
-.file-field .file-path-wrapper {
-  overflow: hidden;
-  padding-left: 10px;
-}
 
-.file-field input.file-path {
-  width: 100%;
-}
-
-.file-field .btn, .file-field .btn-large {
-  float: left;
-  height: 3rem;
-  line-height: 3rem;
-}
-
-.file-field span {
-  cursor: pointer;
-}
-
-.file-field input[type=file] {
-  position: absolute;
-  top: 0;
-  right: 0;
-  left: 0;
-  bottom: 0;
-  width: 100%;
-  margin: 0;
-  padding: 0;
-  font-size: 20px;
-  cursor: pointer;
-  opacity: 0;
-  filter: alpha(opacity=0);
-}
 
 /* Range
    ========================================================================== */
@@ -1200,4 +1175,7 @@ input[type=number]::-webkit-inner-spin-button,
 input[type=number]::-webkit-outer-spin-button { 
   -webkit-appearance: none; 
   margin: 0; 
+}
+.submit_div{
+    padding-top: 15px;
 }

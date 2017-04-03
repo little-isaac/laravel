@@ -54,6 +54,9 @@ nav.main_nav{
                 img{
                     max-width: 180px;
                     padding: 10px 0 25px;
+                    @media(max-width:1024px){
+                            padding: 0 0 15px;
+                    }
                 }
             }
         }
@@ -177,3 +180,19 @@ nav.main_nav{
     }
   }
 }
+.mobile_menu_btn{
+    padding-left: 15px;
+}
+.mobile_cart_btn{
+    padding-right :15px;
+    text-align: right;
+}
+.mobile_menu_btn,.mobile_cart_btn{
+    a{
+      line-height:30px;
+      font-size:26px;
+    }
+    @media(min-width:1025px){
+      display:none;
+    }
+  }

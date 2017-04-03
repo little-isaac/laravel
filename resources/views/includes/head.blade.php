@@ -9,14 +9,12 @@ if (strtolower($title) == 'index') {
 }
 $title = ucwords($title);
 ?>
-<title><?php echo $title; ?></title>
 <script>
     window.theme = window.theme || {};
-    window.business = window.business || {};
-    window.cn = function (o) {
-        return"undefined" == typeof o || null == o || "" == o.toString().trim()
-    };
-</script>
+theme = {};
+    </script>
+<title><?php echo $title; ?></title>
 <link href="https://fonts.googleapis.com/css?family=Work+Sans:400,600" rel="stylesheet">
 <link href="https://fonts.googleapis.com/css?family=Roboto:300,400" rel="stylesheet">
 <link href="{{ URL::asset('css/style.css') }}?t=<?php echo time() ?>" rel="stylesheet" type="text/css"/>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">

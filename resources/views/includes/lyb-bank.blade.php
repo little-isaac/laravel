@@ -29,6 +29,15 @@
                 </div>
             </div>
              <div class="col-sm-6">
+                <div class="input-field @if($errors->has('account_holder_no')) has-error has-feedback  @endif">
+                    <label>Account holder name:</label>
+                    <input    type="text" class="form-control number"   name='account_holder_no'>
+                    @if($errors->has('account_no'))
+                    <span class="glyphicon glyphicon-remove form-control-feedback"></span>
+                    <p class="form-control-static">{{ $errors->first('account_holder_no') }}</p>@endif
+                </div>
+            </div>
+             <div class="col-sm-6">
                 <div class="input-field @if($errors->has('ifsc_code')) has-error has-feedback  @endif">
                     <label>Ifsc code:</label>
                     <input    type="text" class="form-control number"   name='ifsc_code'>

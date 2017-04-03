@@ -1,0 +1,95 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : Apr 2, 2017, 2:32:53 PM
+    Author     : PRABHAKAR
+*/
+
+
+
+//table
+$thead_background:#37474f;
+$th_font_color:#fff;
+$row_background_color:#f5f5f5;
+$row_hover_color:#f2f2f2;
+$table_border_color:#ddd;
+
+.table{
+    overflow: auto;
+    &.table-center{
+        tr,th,td{
+            text-align: center;
+        }
+
+    }
+    &.row-color{
+        tbody{
+            tr{
+                &:nth-child(even) {
+                    background-color: $row_background_color;
+                }
+                &:hover{
+                    background-color: $row_hover_color;
+                }
+            }
+        }
+    }
+    &.full-color{
+        thead{
+            tr{
+                background-color:$thead_background; 
+
+                th{
+                    color:$th_font_color;
+                }
+            }
+        }
+        tbody{
+            tr{
+                &:nth-child(even) {
+                    background-color: $row_background_color;
+                }
+                &:hover{
+                    background-color: $row_hover_color;
+                }
+            }
+        }
+    }
+    table{
+
+        width:100%;
+        thead{
+            tr{
+                border: 1px solid $table_border_color;
+                th{
+                    padding: 8px;
+                    display: table-cell;
+                    text-align: left;
+                    vertical-align: middle;
+                    border-radius: 2px;
+                    font-weight: bold;
+                    border-color: #fff;
+                    border-right: 1px solid $table_border_color;
+                    border-bottom: 2px solid $table_border_color;
+                    min-width: 100px;
+                }
+            }
+        }
+        tbody{
+            tr{
+                border-top:none; 
+                border: 1px solid $table_border_color;
+
+                td{
+                    border-right:1px solid $table_border_color; 
+                    padding: 8px;
+                    min-width: 100px;
+
+                }
+            }
+        }
+    }
+}
